@@ -70,13 +70,11 @@ public class App {
         while (guess != ans) {
             if (guess < ans) {
                 System.out.print("Too low. Guess again: ");
-                n++;
-                guess = in.nextInt();
             } else {
                 System.out.print("Too high. Guess again: ");
-                n++;
-                guess = in.nextInt();
             }
+            n++;
+            guess = in.nextInt();
 
         }
         System.out.println("You got it in " + n + " guesses!");
