@@ -49,15 +49,38 @@ public class App {
         System.out.println("Let's play Guess the Number!");
         System.out.print("\n");
 
+
         System.out.print("Enter the difficulty level (1, 2, or 3): ");
         int dif = in.nextInt();
 
-        if(dif == 1) {
-            int ans = (int)(Math.random() * 10 + 1);
+        int ans = 0;
+        int n = 1;
+
+        if (dif == 1) {
+            ans = (int) (Math.random() * 10 + 1);
+        } else if (dif == 2) {
+            ans = (int) (Math.random() * 100 + 1);
+        } else if (dif == 3) {
+            ans = (int) (Math.random() * 1000 + 1);
         }
 
-        System.out.print("I have my number. What's your guess?");
+        System.out.print("I have my number. What's your guess? ");
         int guess = in.nextInt();
+
+        while (guess != ans) {
+            if (guess < ans) {
+                System.out.print("Too low. Guess again: ");
+                n++;
+                guess = in.nextInt();
+            } else {
+                System.out.print("Too high. Guess again: ");
+                n++;
+                guess = in.nextInt();
+            }
+
+        }
+        System.out.println("You got it in " + n + " guesses!");
+
 
     }
 }
