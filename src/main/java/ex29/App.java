@@ -33,12 +33,12 @@ Use a loop to trap bad input, so you can ensure that the user enters valid value
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("What is the rate of return? ");
         //int
 
         //if ()
         System.out.print("What is the rate of return? ");
-    }
+    }*/
 }
